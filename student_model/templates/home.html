@@ -3,9 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Student Model</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <h1>This is Student model</h1>
+  <body class="">
+    <h1 class="text-center text-info text-2xl font-bold mt-10">
+      This is Student model
+    </h1>
+
+    {% if datas %}
+    <div class="overflow-x-auto mt-5">
+      <table class="table table-zebra">
+        <thead>
+          <tr class="text-center">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Roll</th>
+            <th>Father's Name</th>
+            <th>Mother's Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          {% for data in datas %}
+          <tr>
+            <th>{{data.id}}</th>
+            <td>{{data.name}}</td>
+            <td>{{data.roll}}</td>
+            <td>{{data.fathers_name}}</td>
+            <td>{{data.mothers_name}}</td>
+            <td>
+              <button class="btn btn-sm btn-primary">Edit</button>
+              <button class="btn btn-sm btn-error">Delete</button>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% endif %}
   </body>
 </html>
