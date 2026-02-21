@@ -39,7 +39,9 @@
             <td>{{data.mothers_name}}</td>
             <td>
               <button class="btn btn-sm btn-primary">Edit</button>
-              <button class="btn btn-sm btn-error">Delete</button>
+              <button class="btn btn-sm btn-error">
+                <a href="{% url 'delete_student' data.roll %}">Delete</a>
+              </button>
             </td>
           </tr>
           {% endfor %}
