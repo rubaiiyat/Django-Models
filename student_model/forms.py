@@ -12,6 +12,3 @@ class StudentForm(forms.ModelForm):
             'fathers_name':'Father Name',
             'mothers_name':'Mother Name'
         }
-        help_texts={
-            'name':'Enter your full name'
-        }

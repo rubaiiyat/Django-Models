@@ -5,8 +5,8 @@ class Student(models.Model):
     name=models.CharField(max_length=50)
     roll=models.IntegerField(unique=True)
     address=models.TextField()
-    fathers_name=models.CharField(default="Unknown",max_length=50)
-    mothers_name=models.CharField(default="Unknown",max_length=50)
+    fathers_name=models.CharField(default="",max_length=50)
+    mothers_name=models.CharField(default="",max_length=50)
     
 
     def __str__(self):
